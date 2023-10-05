@@ -42,6 +42,7 @@ function watchstart()
         start_button.innerHTML = "Resume";
         button_state = "start";
         reset_button.innerHTML = "Reset" ;
+        button_state ="reset";
     
     
          }
