@@ -13,14 +13,44 @@ function stopwatch()
             hours++;
         }    
     }
-    displaytime.innerHTML = hours +":"+ minutes +":"+ seconds;
+    let h = hours < 10 ? "0" + hours : hours;
+    let m = minutes < 10 ? "0" + minutes : minutes;
+    let s = seconds < 10 ? "0" + seconds : seconds;
+
+
+    displaytime.innerHTML = h +":"+ m +":"+ s;
 }
 
-function watchstart(){
+function watchstart()
+{
 
     if(timer!== null)
     {
         clearInterval(timer);
     }
+
     timer = setInterval( stopwatch,1000);
+
+    
+   
 }
+
+function watchstop()
+{
+    if(timer!=null){
+   {clearInterval(timer);}
+    }
+}
+
+function watchreset(){
+    clearInterval(timer);
+    [sec,min,hrs]=[0,0,0];
+    displaytime.innerHTML="00:00:00";
+}
+
+function watchlap(){
+}
+
+
+
+
