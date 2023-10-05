@@ -6,7 +6,7 @@ function stopwatch()
 {
     seconds++;
     if(seconds==60){
-        second=0;
+        seconds=0;
         minutes++;
         if(minutes==60){
             minutes=0;
@@ -30,6 +30,7 @@ function watchstart()
     }
 
     timer = setInterval( stopwatch,1000);
+
 
     
    
